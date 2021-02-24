@@ -42,7 +42,7 @@ class Tabs extends Component {
         <ul className="tabs">
           {tabs}
         </ul>
-        <div class="tabs-content">
+        <div className="tabs-content">
           <h2 className="heading">{this.state.heading}</h2>
           <p>{tabsContent}</p>
         </div>
