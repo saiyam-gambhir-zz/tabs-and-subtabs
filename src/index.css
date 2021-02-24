@@ -2,7 +2,7 @@
 body { margin: 0; color: var(--color-black); font-family: 'Akaya Telivigala', cursive; }
 ul { padding: 0; }
 #root { display: flex; min-height: calc(100vh - 40px); padding: 20px 10px; }
-.tabs { padding-left: 0; flex: .2; margin: 0; padding: 10px; border-right: solid 2px var(--theme-color); }
+.tabs { flex: .2; margin: 0; padding: 3px 10px 10px 10px; border-right: solid 2px var(--theme-color); }
 .tab > span { text-transform: uppercase; }
 .sub-tabs .tab > span { text-transform: capitalize; font-size: 16px; }
 .tab { list-style-position: inside; font-size: 16px; margin-bottom: 10px; }
@@ -11,11 +11,9 @@ ul { padding: 0; }
 .tabs-content { flex: .8; padding-left: 20px; }
 .tab.active > span, .sub-tab.active > span { color: var(--theme-color); pointer-events: none; }
 .sub-tab > span { text-transform: capitalize; }
-.heading { border-bottom: solid 2px var(--theme-color); padding-bottom: 5px; text-transform: uppercase; }
-.heading, .sub-heading { margin-top: 0; font-size: 22; color: var(--theme-color); text-transform: capitalize; margin-bottom: 10px; }
-.sub-heading { font-size: 18px; color: var(--color-black); margin-top: 25px; }
+.heading { border-bottom: solid 2px var(--theme-color); padding-bottom: 15px; text-transform: uppercase; margin-top: 0; font-size: 22px; color: var(--theme-color); text-transform: capitalize; margin-bottom: 15px; }
 .content { line-height: 26px; margin: 10px 0; }
 .sub-tabs:empty { padding: 0; }
 .sub-tabs .tab { font-size: 14px; margin-bottom: 5px; }
 .sub-tabs .tab:last-child { margin-bottom: 0; }
-.tabs-content p { line-height: 30px; font-size: 20px; }
+.tabs-content p { line-height: 30px; font-size: 20px; margin: 0; }
