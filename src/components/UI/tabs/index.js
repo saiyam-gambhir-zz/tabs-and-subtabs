@@ -53,9 +53,9 @@ class Tabs extends Component {
 
   formatContent = (content = {}) => {
     tabs.map(tab => {
-      return tab.subTabs.map(subTab => {
-        return content = { ...content, [subTab.name]: { activeSubTab: subTab.id, value: subTab.content }}
-      });
+      return tab.subTabs.map(subTab => (
+        content = { ...content, [subTab.name]: { activeSubTab: subTab.id, value: subTab.content }}
+      ));
     });
 
     return content;
@@ -73,9 +73,11 @@ class Tabs extends Component {
 
   renderTabContent = () => {
     let content = this.formatContent();
-    return Object.keys(content).map(item => (
-      this.state.activeSubTab === content[item].activeSubTab ? <TabContent key={content[item].activeSubTab}>{content[item].value}</TabContent> : null
-    ));
+    if(Object.keys(content).length > 0) {
+      return Object.keys(content).map(item => (
+        this.state.activeSubTab === content[item].activeSubTab ? <TabContent key={content[item].activeSubTab}>{content[item].value}</TabContent> : null
+      ));
+    }
   };
 
   render() {
